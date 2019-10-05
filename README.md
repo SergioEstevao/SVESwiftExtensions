@@ -1,3 +1,3 @@
-# SVELibrary
+# SVESwiftExtensions
 
-A description of this package.
+A group of extensions that make common operations in Swift a bit easier.
