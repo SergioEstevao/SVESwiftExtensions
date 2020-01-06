@@ -23,4 +23,10 @@ public extension Collection {
             sum + element[keyPath: keyPath]
         }
     }
+
+    func some(where condition: (Element) throws -> Bool ) rethrows -> Bool {
+        try reduce(false) { (status, value) in
+            return try status || condition(value)
+        }
+    }
 }

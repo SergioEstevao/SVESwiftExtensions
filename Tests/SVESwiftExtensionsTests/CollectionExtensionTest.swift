@@ -29,6 +29,15 @@ class CollectionExtensionTest: XCTestCase {
         XCTAssertEqual(result, 3)
     }
 
+    func testSome() {
+        let data = [1, 2, 3, 4, 5, 6];
+
+        let result = data.some(where: { $0.isMultiple(of:2) } )
+
+        XCTAssertTrue(result)
+
+        XCTAssertFalse(data.some(where: { $0.isMultiple(of:10) } ))
+    }
     static var allTests = [
         ("testAccumulate", testAccumulate),
         ("testCount", testCount)
